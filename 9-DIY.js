@@ -14,16 +14,19 @@ describe('9-DIY.js', () => {
       return esDivisiblePorDos
     }
 
-    expect(esPar(1)).toBe(RellenameCorrectamente)
-    expect(esPar(22)).toBe(RellenameCorrectamente)
-    expect(esPar(333)).toBe(RellenameCorrectamente)
-    expect(esPar(1234)).toBe(RellenameCorrectamente)
+    expect(esPar(1)).toBe(false)
+    expect(esPar(22)).toBe(true)
+    expect(esPar(333)).toBe(false)
+    expect(esPar(1234)).toBe(true)
   })
   // ¡¡¡A PROGRAMAR!!!
   it('crea una función que nos diga si un número es impar', () => {
     // Fácil, ¿No?
     // Escribe tu código aquí.
-
+    let esInpar = function(unNumero){
+      let esDivisiblePorTres= (unNumero % 3 ===0)
+      return esDivisiblePorTres
+    }
 
     expect(esImpar(1)).toBe(true)
     expect(esImpar(22)).toBe(false)
