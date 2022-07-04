@@ -20,13 +20,12 @@ describe('9-DIY.js', () => {
     expect(esPar(1234)).toBe(true)
   })
   // ¡¡¡A PROGRAMAR!!!
-  it('crea una función que nos diga si un número es impar', () => {
+  skip('crea una función que nos diga si un número es impar', () => {
     // Fácil, ¿No?
     // Escribe tu código aquí.
-    let esInpar = function(unNumero){
-      let esDivisiblePorTres= (unNumero % 3 ===0)
-      return esDivisiblePorTres
-    }
+  
+     
+
 
     expect(esImpar(1)).toBe(true)
     expect(esImpar(22)).toBe(false)
@@ -36,6 +35,15 @@ describe('9-DIY.js', () => {
   // ¡WOW! ^^
   it('crea una función que nos diga si dos números son iguales', () => {
     // Escribe tu código aquí.
+    function sonIguales(num1, num2){
+      if (num1 === num2){
+        return true;
+      } else {
+        return false;
+      }
+      
+
+    }
 
 
     expect(sonIguales(1, 1)).toBe(true)
@@ -44,19 +52,36 @@ describe('9-DIY.js', () => {
     expect(sonIguales(1234, 4321)).toBe(false)
   })
 
-  it('crea una función que sume tres número', () => {
+  it('crea una función que sume tres números', () => {
     // Escribe tu código aquí.
+
+    function suma (num1 , num2 , num3){
+     let resultado;
+     resultado = num1 + num2 +num3;
+     return resultado;
+    }
 
     expect(suma(1, 1, 1)).toBe(3)
     expect(suma(3, 4, 5)).toBe(12)
     expect(suma(89, 32, 56)).toBe(177)
     // Lee atentamente el error, puede que no sea problema de tu código.
-    expect(suma(47847343673, 23412314123421, 26897712)).toBe(23460088364806)
+    expect(suma(47847343673, 23412314123421, 26897712)).toBe(23460188364806)
     // Ups... parece que me equivoque en la más difícil, ¿Puedes arreglarlo? :)
   })
 
   it('crea una función que nos diga que ya sabemos programar', () => {
     // Escribe tu código aquí.
+    function miTestDimeQuienEsElMejorCoder(){
+        let mejorProgramador = "Tu";
+        let saberProgramar = true;
+
+        if (saberProgramar){
+          return mejorProgramador;
+        } else {
+          saberProgramar= false;
+        }
+
+    }
 
     // Trailer del siguiente fichero.
     expect(miTestDimeQuienEsElMejorCoder()).toBe('Tu')

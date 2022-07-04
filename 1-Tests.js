@@ -24,7 +24,7 @@ describe('1-Tests.js', () => {
   // ¡Bien! Has puesto en verde tu primer test, seguro que lo has podido comprobar
   // en tu navegador. ¡Ahora a ponerlos todos en verde!
   // ¡Cuidado, este test es muy difícil!
-  skip('!NO, PUEDES, PASAR!', () => {
+  skip('Pues no es tan difícil', () => {
     // Ok. Como se puede ver no es tan difícil como parece.
     // Aprovecho para explicar una situación con la que te puedes encontrar.
     // Imaginate, que estas con un test y que es realmente difícil de poner
