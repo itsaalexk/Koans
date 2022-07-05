@@ -22,6 +22,10 @@ describe('20-Clases101.js', () => {
     expect(UnaClase).not.toBeUndefined()
     // Ahora declara tu una clase que se llame OtraClase
     // Escribe tu código aquí abajo
+    
+    class OtraClase {
+
+    }
 
 
     expect(OtraClase).not.toBeUndefined()
@@ -38,11 +42,11 @@ describe('20-Clases101.js', () => {
     const unaNuevaInstanciaDeString = ''
     const unaStringVacia = new String() // Así se crea una nueva instancia de String.
     // ¡BOOOM! Lo escuché desde aquí.
-    expect(unaStringVacia == unaNuevaInstanciaDeString).toBe(RellenameCorrectamente)
+    expect(unaStringVacia == unaNuevaInstanciaDeString).toBe(true)
     // ¿Que piensas que ocurre, sí creamos un nuevo número?
     const nuevoNumero = new Number() // Así se crea una nueva instancia de Number.
 
-    expect(nuevoNumero == 0).toBe(RellenameCorrectamente)
+    expect(nuevoNumero == 0).toBe(true)
     // Lo siento, pero no sé porque eligieron el Zero, pero seguro que hay un motivo.
     // No se si te has dado cuenta, pero si, estoy usando solo == en lugar de
     // ===, no es un error. Lo explicaré en otras Koans sobre clases.
@@ -51,16 +55,16 @@ describe('20-Clases101.js', () => {
     // se vea porqué usar lo. Vamos a probar.
     const zero = new Number()
     // Sin trampas, una suma.
-    expect(zero + 10).toBe(RellenameCorrectamente)
+    expect(zero + 10).toBe(10)
 
     const unNumero = Number // Sin instanciar, esto es la definición de Numero.
     const unNumeroMasDiez = unNumero + 10
     // Cuidado, que esto tiene trampa.
-    expect(unNumeroMasDiez === 10).toBe(RellenameCorrectamente)
+    expect(unNumeroMasDiez === 10).toBe(false)
     // O.o
     // La siguiente expectación, si no la puedes resolver, puedes comentarlo o borrarlo.
     // Pero mira el error muy, muy, atentamente, a ver si ves que ha pasado.
-    expect(unNumeroMasDiez).toBe(RellenameCorrectamente) // Añade algo de contenido dentro de las comillas.
+    //expect(unNumeroMasDiez).toBe(10) // Añade algo de contenido dentro de las comillas.
     // Lo que intento que veas es que si usas el nombre de una clase, el valor
     // que contiene es la declaración.
     // La declaración de una clase es donde se indica como se tiene que comportar.
@@ -82,15 +86,15 @@ describe('20-Clases101.js', () => {
     // combustible? Probemos.
     const nuevaMoto = new Moto()
 
-    expect(nuevaMoto.litrosDeCombustible).toBe(RellenameCorrectamente)
+    expect(nuevaMoto.litrosDeCombustible).toBe(0)
     // Ahora le incrementaremos unos litros de combustible.
     nuevaMoto.litrosDeCombustible += 3
     // Ahora crearemos otra nueva Moto.
     const otraNuevaMoto = new Moto()
 
     // Entonces, la cosa queda:
-    expect(nuevaMoto.litrosDeCombustible).toBe(RellenameCorrectamente)
-    expect(otraNuevaMoto.litrosDeCombustible).toBe(RellenameCorrectamente)
+    expect(nuevaMoto.litrosDeCombustible).toBe(3)
+    expect(otraNuevaMoto.litrosDeCombustible).toBe(0)
     // Cada instancia de Moto, tiene sus propios litros de combustible.
     // Mientras no cambiemos la declaración de Moto, siempre se iniciaran
     // sin combustible.
@@ -123,17 +127,17 @@ describe('20-Clases101.js', () => {
     // Nota: Esto. Esto, es el Big Bang.
     const patinete = new PatineteElectrico()
 
-    expect(patinete.porcentajeDeBateria).toBe(RellenameCorrectamente)
+    expect(patinete.porcentajeDeBateria).toBe(100)
 
     patinete.arrancar() // Atentos a los paréntesis que indica, la ejecución de una función.
 
-    expect(patinete.porcentajeDeBateria).toBe(RellenameCorrectamente)
+    expect(patinete.porcentajeDeBateria).toBe(99)
 
     // Si ya está arrancado el patinete, ¿nos deja volverlo a arranca?
 
     patinete.arrancar()
 
-    expect(patinete.porcentajeDeBateria).toBe(RellenameCorrectamente)
+    expect(patinete.porcentajeDeBateria).toBe(98)
     // ¿Qué esperabas? Si solo le hemos definido como se arranca xD
     // Mi patinete aún tiene algunas deficiencias ;)
     // Pues ahora, voy a por el Patinete PRO.
@@ -156,15 +160,15 @@ describe('20-Clases101.js', () => {
 
     const patienetePro = new PatinetePRO()
 
-    expect(patienetePro.porcentajeDeBateria).toBe(RellenameCorrectamente)
+    expect(patienetePro.porcentajeDeBateria).toBe(100)
 
     patienetePro.arrancar()
 
-    expect(patienetePro.porcentajeDeBateria).toBe(RellenameCorrectamente)
+    expect(patienetePro.porcentajeDeBateria).toBe(99)
 
     patienetePro.arrancar()
     // ¡QUÉ EXPECTACIÓN!
-    expect(patienetePro.porcentajeDeBateria).toBe(RellenameCorrectamente)
+    expect(patienetePro.porcentajeDeBateria).toBe(99)
     // Casi, todo lo que hemos visto en estas Koans, ha sido para
     // arrancar este patinete ^^
 
@@ -185,6 +189,7 @@ describe('20-Clases101.js', () => {
       // ¿Comó tendrá que dejarlo la función parar?
       parar() {
         // Entre estas llaves va tu código. CMON!
+        this.estaArrancado= false;
 
       }
     }
@@ -193,25 +198,25 @@ describe('20-Clases101.js', () => {
     // BRO!
     theBestPatineteEver.arrancar()
 
-    expect(theBestPatineteEver.porcentajeDeBateria).toBe(RellenameCorrectamente)
+    expect(theBestPatineteEver.porcentajeDeBateria).toBe(99)
 
     theBestPatineteEver.arrancar()
     // Esto es lo de antes... Si ya está arrancado, no vuelve a arrancar.
-    expect(theBestPatineteEver.porcentajeDeBateria).toBe(RellenameCorrectamente)
+    expect(theBestPatineteEver.porcentajeDeBateria).toBe(99)
 
     theBestPatineteEver.parar()
     theBestPatineteEver.arrancar()
 
-    expect(theBestPatineteEver.porcentajeDeBateria).toBe(RellenameCorrectamente)
+    expect(theBestPatineteEver.porcentajeDeBateria).toBe(98)
 
     theBestPatineteEver.parar()
     // Parar, no consume batería
-    expect(theBestPatineteEver.porcentajeDeBateria).toBe(RellenameCorrectamente)
+    expect(theBestPatineteEver.porcentajeDeBateria).toBe(98)
 
     // Y ¿qué pasaría si creamos un nuevo PatineteMegaPro?
     const otroPatineteMegaPro = new PatineteMegaPro()
 
-    expect(otroPatineteMegaPro.porcentajeDeBateria).toBe(RellenameCorrectamente)
+    expect(otroPatineteMegaPro.porcentajeDeBateria).toBe(100)
     // Esto solo era para ver como va el nivel de atención ;)
   })
   // Volviendo a lo del Big Bang. Yo sostengo la teoría de que cuando la
@@ -234,6 +239,18 @@ describe('20-Clases101.js', () => {
 
     // Ahora iremos desgranando, lee los expects con calma e intenta solucionarlos 1 a 1.
     // La definición de tu clase va aquí abajo.
+    const BiciElectrica= class{
+      porcentajeDeBateria= 0;
+      ponerBateria(){
+        this.porcentajeDeBateria=100;
+      }
+      pedalear(){
+        if (this.porcentajeDeBateria >0){
+          this.porcentajeDeBateria -=1;
+        }
+      }
+
+    }
 
 
     // 1 - Vas a DEFINIR una CLASE que se llama BiciElectrica.
@@ -278,7 +295,7 @@ describe('20-Clases101.js', () => {
     // reasignar.
     LaFormaQueMenosMeGusta = 'Me han reasignado y ya no soy una clase'
 
-    expect(LaFormaQueMenosMeGusta).toBe(RellenameCorrectamente)
+    expect(LaFormaQueMenosMeGusta).toBe('Me han reasignado y ya no soy una clase')
   })
 
   it('otras maneras de declarar atributos', () => {
@@ -296,7 +313,7 @@ describe('20-Clases101.js', () => {
 
     const nuevaMoto = new MotoElectrica()
 
-    expect(nuevaMoto.porcentajeDeBateria).toBe(RellenameCorrectamente)
+    expect(nuevaMoto.porcentajeDeBateria).toBe(100)
     // Venga... otro universo... Tomate algo para el dolor de cabeza xD
     // Fijate que siempre que usamos "new" después del nombre de la clase
     // usamos los "()" como si ejecutamos la clase (que es lo que hacemos
@@ -324,8 +341,8 @@ describe('20-Clases101.js', () => {
     const unPersonaje = new Personaje(100)
     const otroPersonaje = new Personaje(50)
     // Pues nada... actualicemos una vez más el mapa estelar... xDD
-    expect(unPersonaje.puntosDeVida).toBe(RellenameCorrectamente)
-    expect(otroPersonaje.puntosDeVida).toBe(RellenameCorrectamente)
+    expect(unPersonaje.puntosDeVida).toBe(100)
+    expect(otroPersonaje.puntosDeVida).toBe(50)
   })
   // Descansa, vamos a algo fácil ;)
   it('los nombres de las clases se definen con cada primera letra de cada palabra en mayúsculas', () => {
@@ -340,7 +357,7 @@ describe('20-Clases101.js', () => {
     // ¡Y! en muy pocas ocasiones en Javascript se usa la forma de... "snake_case"
     const SOY_ESPECIAL_EN_JAVASCRIPT = 'esto para otro día, lo prometo ^^'
     // esta expectación no tiene trampa
-    expect(SOY_ESPECIAL_EN_JAVASCRIPT).toBe(RellenameCorrectamente)
+    expect(SOY_ESPECIAL_EN_JAVASCRIPT).toBe('esto para otro día, lo prometo ^^')
   })
 })
 // Si las clases en Javascript son la Joya de la corona. Intenta no pasar de estas
