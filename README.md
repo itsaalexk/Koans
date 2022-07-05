@@ -4,7 +4,7 @@ Un kōan es un término que viene del Zen y se refiere a la prueba que le pone u
 
 El objetivo de estas koans es aprender el lenguaje, la sintaxis, la estructura de Javascript y al mismo tiempo que aprendemos a programar. Todo mediante pruebas (tests desde ahora). También se quiere introducir al TDD (desarrollo guiado por tests) que originalmente forma parte de la metodología de XP (Extreme programming).
 
-> Nota: Cualquier cosa que se vea mal, ya sean faltas de ortografía, explicaciones erróneas, tests incorrectos, me refiero a la persona que realiza las koans con un genero en especifico, lo que se te ocurra para mejorar estas koans, bienvenido será. Comunicame lo de la manera que puedas y sepas, aunque una MR (Merge request) / PR (Pull request) es lo que más me mola ^^
+> Nota: Cualquier cosa que se vea mal, ya sean faltas de ortografía, explicaciones erróneas, tests incorrectos, me refiero a la persona que realiza las koans con un genero en especifico, lo que se te ocurra para mejorar estas koans, bienvenido será. Comunicame lo de la manera que puedas y sepas, aunque una MR (Merge request) / PR (Pull request) es lo que más me mola.
 
 ## ¿Qué necesito para empezar?
 
