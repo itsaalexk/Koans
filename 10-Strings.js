@@ -118,7 +118,7 @@ describe('10-Strings.js', () => {
     // gastan mucho las comillas simples cuando escriben (Ej: don't)
   })
 
-  it('DIY', () => {
+  skip('DIY', () => {
     // Vamos a juntar todo lo que sabemos un poco (para que no se olvide :)
     // Crea una función que le pasemos dos cadenas de text y devuelva
     // true si son iguales y false si no lo son. Fácil, ¿no?
@@ -141,14 +141,7 @@ describe('10-Strings.js', () => {
     // Ahora crea una función que le pasemos dos strings y nos devuelva
     // una string que sea la suma de las dos pasadas y todo en minúsculas.
     // Escribe aquí tu código
-    function sumaEnMinusclas(a,b,c){
-        
-    let text1= "unaString".toLowerCase();
-    let text2 = "otraString".toLowerCase();
-    a=text1,text1;
-    b=text1+text2;
-
-    }
+  
 
   
 
@@ -165,26 +158,26 @@ describe('10-Strings.js', () => {
     // diferencias a primera vista es que usa comillas invertidas (backticks)
     let unTemplate = `soy un template`
     // ¿Se podrá comparar con los otros strings?
-    expect(unTemplate === 'soy un template').toBe(RellenameCorrectamente)
-    expect(unTemplate === "soy un template").toBe(RellenameCorrectamente)
+    expect(unTemplate === 'soy un template').toBe(true)
+    expect(unTemplate === "soy un template").toBe(true)
     // Estas pensando: - ¡La string definitiva!, tiene libres todas las comillas.
     unTemplate = `string con
 salto de linea`
     // No todo es lo que parece, te acuerdas cuando sumamos strings con números ^^
-    expect(unTemplate === 'string con salto de linea').toBe(RellenameCorrectamente)
-    expect(unTemplate === 'string con\nsalto de linea').toBe(RellenameCorrectamente)
+    expect(unTemplate === 'string con salto de linea').toBe(false)
+    expect(unTemplate === 'string con\nsalto de linea').toBe(true)
     // Puede que tenga algunas diferencias, por eso un fichero de tests aparte.
 
     // Otra cosa importante es que tu puedes interpolar valores dentro del template
     // con ${valor} (Mira la siguiente línea, es más fácil de entender)
     let templateConUnValor = `Tengo un ${1} como valor interpolado`
 
-    expect(templateConUnValor === 'Tengo un 1 como valor interpolado').toBe(RellenameCorrectamente)
-    expect(templateConUnValor === 'Tengo un ' + 1 + ' como valor interpolado').toBe(RellenameCorrectamente)
+    expect(templateConUnValor === 'Tengo un 1 como valor interpolado').toBe(true)
+    expect(templateConUnValor === 'Tengo un ' + 1 + ' como valor interpolado').toBe(true)
     // Si le podemos interpolar valores, le podemos interpolar variables
     let unValor = 10
     let templateConUnaVariable = `La multiplicación de ${unValor} por ${unValor} es ${unValor * unValor}`
-    expect(templateConUnaVariable === 'La multiplicación de 10 por 10 es 100').toBe(RellenameCorrectamente)
+    expect(templateConUnaVariable === 'La multiplicación de 10 por 10 es 100').toBe(true)
     // Aquí se le ve más utilidad ^^
     // Aunque lo de la interpolación se puede hacer sumando variables a una string, por ahora
     // solo lo hemos visto para que te suene.

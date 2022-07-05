@@ -18,12 +18,22 @@ describe('12-ElTriangulo.js', () => {
   it('nos dice que tipo de triangulo es dependiendo de el tamaño de sus lados', () => {
     // Ahora vamos a traducir el problema en humano, a developer ;)
 
-    // VAS a crear una función que va a recivir 3 integers, que serán el tamaño
+    // VAS a crear una función que va a recibir 3 integers, que serán el tamaño
     // de los tres lados del triángulo y
     // SI los TRES lados son IGUALES, DEVUELVE la string "es equilátero"
     // SI los TRES lados son DIFERENTES, DEVUELVE la string "es escaleno"
     // SI DOS de los lados son IGUALES, DEVUELVE la string "es isósceles"
     // Escribe tu función aquí abajo y haz que pasen todos los expects
+
+    function tipoDeTriangulo(a,b,c){
+      if (a===b && b=== c && a === c){
+        return ("es equilátero")
+      } else if (a !==b && b !== c && c !== a){
+        return ("es escaleno")
+      } else if (b === c || a === c || a === b){
+        return ("es isósceles")
+      }
+    }
 
 
     expect(tipoDeTriangulo(10, 10, 10)).toBe('es equilátero')
@@ -37,10 +47,10 @@ describe('12-ElTriangulo.js', () => {
     // ¡¡¡BONUS TRACK!!!
     // Ahora modifica tu función, para que SÍ ALGUNO de los tres lados es IGUAL A CERO
     // tiene que DEVOLVER "Triángulo imposible"
-    expect(tipoDeTriangulo(0, 11, 111)).toBe('Triángulo imposible')
+    /*expect(tipoDeTriangulo(0, 11, 111)).toBe('Triángulo imposible')
     expect(tipoDeTriangulo(1, 0, 111)).toBe('Triángulo imposible')
     expect(tipoDeTriangulo(1, 0, 0)).toBe('Triángulo imposible')
-    expect(tipoDeTriangulo(0, 11, 0)).toBe('Triángulo imposible')
+    expect(tipoDeTriangulo(0, 11, 0)).toBe('Triángulo imposible')*/
     // Si ves que se te complica mucho, te dejo comentar los 4 últimos expects.
   })
 })

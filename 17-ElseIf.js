@@ -23,9 +23,9 @@ describe('17-ElseIf.js', () => {
       return respuesta
     }
 
-    expect(calculadora(1, '+', 2)).toBe(RellenameCorrectamente)
-    expect(calculadora(10, '-', 3)).toBe(RellenameCorrectamente)
-    expect(calculadora(1312, '/', 2132)).toBe(RellenameCorrectamente)
+    expect(calculadora(1, '+', 2)).toBe("El resultado de la suma es: 3")
+    expect(calculadora(10, '-', 3)).toBe("El resultado de la resta es: 7")
+    expect(calculadora(1312, '/', 2132)).toBe('Operación desconocida')
   })
 
   it('puedes gastar tantos como quieras', () => {
@@ -54,12 +54,12 @@ describe('17-ElseIf.js', () => {
       return respuesta
     }
 
-    expect(calculadoraMejorada(1, '+', 2)).toBe(RellenameCorrectamente)
-    expect(calculadoraMejorada(10, '-', 3)).toBe(RellenameCorrectamente)
-    expect(calculadoraMejorada(2, '*', 5)).toBe(RellenameCorrectamente)
-    expect(calculadoraMejorada(10, '/', 2)).toBe(RellenameCorrectamente)
-    expect(calculadoraMejorada(20, '%', 4)).toBe(RellenameCorrectamente)
-    expect(calculadoraMejorada(20, '"!·$', 2)).toBe(RellenameCorrectamente)
+    expect(calculadoraMejorada(1, '+', 2)).toBe("El resultado de la suma es: 3")
+    expect(calculadoraMejorada(10, '-', 3)).toBe("El resultado de la resta es: 7")
+    expect(calculadoraMejorada(2, '*', 5)).toBe("El resultado de la multiplicación es: 10")
+    expect(calculadoraMejorada(10, '/', 2)).toBe("El resultado de la división es: 5")
+    expect(calculadoraMejorada(20, '%', 4)).toBe("El resultado del módulo es: 0")
+    expect(calculadoraMejorada(20, '"!·$', 2)).toBe("Operación desconocida")
     // Como puedes ver el "else" es opcional y como no se cumple ninguna condición
     // no se modifica la respuesta.
   })
@@ -85,6 +85,16 @@ describe('17-ElseIf.js', () => {
     // mayor que el primero y SI NO se cumple ninguna de las condiciones anteriores
     // RETORNARA un mensaje indicando que son iguales.
     // Escribe aquí abajo tu función:
+    function queNumeroEsMayor(num1, num2){
+      if (num1 > num2){
+        return ("El primer número es mayor que el segundo")
+      } else if (num1 < num2){
+        return ("El segundo número es mayor que el primero")
+      } else{
+        return ("Los dos números son iguales")
+      }
+
+    }
 
 
     expect(queNumeroEsMayor(10, 2)).toBe('El primer número es mayor que el segundo')

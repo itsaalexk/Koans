@@ -15,7 +15,7 @@ describe('14-Else.js', () => {
       unValor = 'ejecuta el bloque del else'
     }
 
-    expect(unValor).toBe(RellenameCorrectamente)
+    expect(unValor).toBe("ejecuta el bloque del else")
     // Parece que ha sido muy fácil...
   })
   // Así que a practicar ^^
@@ -30,7 +30,7 @@ describe('14-Else.js', () => {
       unValor = 'o no'
     }
 
-    expect(unValor).toBe(RellenameCorrectamente)
+    expect(unValor).toBe('¿Evaluará como verdadero el número 1?')
 
     if(0) {
       unValor = '¿Evaluará como verdadero el número 0?'
@@ -38,7 +38,7 @@ describe('14-Else.js', () => {
       unValor = 'o como falso'
     }
 
-    expect(unValor).toBe(RellenameCorrectamente)
+    expect(unValor).toBe('o como falso')
 
     if(-1) {
       unValor = '¿Evaluará como verdadero el número -1?'
@@ -46,7 +46,7 @@ describe('14-Else.js', () => {
       unValor = 'o como falso'
     }
 
-    expect(unValor).toBe(RellenameCorrectamente)
+    expect(unValor).toBe('¿Evaluará como verdadero el número -1?')
     // Todos los números menos el 0 evalúan como verdadero. ^^
 
     if('una string') {
@@ -55,7 +55,7 @@ describe('14-Else.js', () => {
       unValor = 'o como falso'
     }
 
-    expect(unValor).toBe(RellenameCorrectamente)
+    expect(unValor).toBe('¿Evaluará como verdadero una string?')
 
     if('') {
       unValor = '¿Evaluará como verdadero una string vacia?'
@@ -63,7 +63,7 @@ describe('14-Else.js', () => {
       unValor = 'o como falso'
     }
 
-    expect(unValor).toBe(RellenameCorrectamente)
+    expect(unValor).toBe("o como falso")
     // Javascript, javascript... lo pone difícil xD
   })
 
@@ -71,6 +71,16 @@ describe('14-Else.js', () => {
     // Usando if else, crea una función que le pasemos un
     // número y nos diga si es positivo o negativo.
     // Escribe tu función aquí abajo:
+
+    function esPositivoONegativo(number){
+        if (number === 0){
+          return ("ni positivo/ni negativo")
+        } else if (number < 0){
+          return ("es negativo")
+        } else{
+          return ("es positivo")
+        }
+    }
 
 
     expect(esPositivoONegativo(1)).toBe('es positivo')
