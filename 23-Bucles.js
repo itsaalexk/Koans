@@ -12,7 +12,7 @@ describe('23-Bucles.js', () => {
       contador += 1
     }
 
-    expect(contador).toBe(RellenameCorrectamente)
+    expect(contador).toBe(5)
     // ¡Bien! Ha ido incrementando 1 a 1 el contador, que es lo que tiene bloque
     // de código. Hasta que se ha dejado de cumplir la condición del "while", que
     // ha sido cuando llega a 5.
@@ -25,9 +25,9 @@ describe('23-Bucles.js', () => {
       contador ++ // ^^
     }
 
-    expect(contador).toBe(RellenameCorrectamente)
+    expect(contador).toBe(10)
     // Como cambia la cosa de un "mayor que" a un "mayor o igual que" ;P
-    expect(unaString).toBe(RellenameCorrectamente)
+    expect(unaString).toBe("0123456789")
     // Ahora otro... que solo guarde los números pares.
     unaString = ''
     contador = 0
@@ -40,8 +40,8 @@ describe('23-Bucles.js', () => {
       contador  = contador + 1 // xDD
     }
 
-    expect(unaString).toBe(RellenameCorrectamente)
-    expect(contador).toBe(RellenameCorrectamente)
+    expect(unaString).toBe("02468")
+    expect(contador).toBe(10)
     // Por ahora parece que tiene utilidad, pero tampoco se le ve como una gran cosa.
     // Te prometo, que esto lo vas a gastar, seguramente no con while. Pero los bucles
     // son muy comunes en el día a día de la programación.
@@ -66,9 +66,9 @@ describe('23-Bucles.js', () => {
       posicionActual += 1
     }
 
-    expect(ultimaPosicionDelString).toBe(RellenameCorrectamente)
-    expect(posicionActual).toBe(RellenameCorrectamente)
-    expect(cantidadDeVocales).toBe(RellenameCorrectamente)
+    expect(ultimaPosicionDelString).toBe(37)
+    expect(posicionActual).toBe(38)
+    expect(cantidadDeVocales).toBe(12)
   })
 
   it('DIY: While edition', () => {
@@ -76,10 +76,17 @@ describe('23-Bucles.js', () => {
     // nombres que se puedan usar en GIT como nombre de rama.
     // Si no sabes que es GIT, olvida la frase anterior xD
     // Lo que hace la herramienta a grandes rasgos, es poner en minúsculas
-    // todas las letras y cambiar los espacios en blaco por "-" a este proceso
+    // todas las letras y cambiar los espacios en blanco por "-" a este proceso
     // le llamamos UGLIFICAR... hacer fea una frase ^^
     // Escribe aquí tu función.
-
+  function uglify(value){
+ 
+  } while (value = 'UnAStrinGSinEsPacioS'){
+    const string = 'UnAStrinGSinEsPacioS';
+    const lowerCase = string.toLowerCase();
+    return lowerCase;
+    
+  }
 
     // Recuerda pasa los tests uno a uno, leer bien los expects y los errores.
     expect(uglify).not.toBeUndefined()
@@ -103,7 +110,7 @@ describe('23-Bucles.js', () => {
       contador += 1
     }
     // Ejecuta el bloque 5 veces.
-    expect(contador).toBe(RellenameCorrectamente)
+    expect(contador).toBe(5)
     // Ahora usando "for" en lugar de "while"
     contador = 0
 
