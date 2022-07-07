@@ -65,7 +65,7 @@ describe('11-If.js', () => {
     let unValor = 'BRO'
     // Rellena la condición entre paréntesis para que ejecute el código
     // en el bloque de código entre llaves (¿Te suena?)
-    if(false) {
+    if(unValor = false) {
       unValor = 'DIY'
     }
 
@@ -119,13 +119,9 @@ describe('11-If.js', () => {
 
     function saluda(nombre){
       saludo= "Saludos"+""+ nombre;
+      return (saludo);
       
-      if (nombre = "Akira"){
-        return ("Saludos Akira");
-      }
-      else if (nombre = "Charlie"){
-        return ("Saludos Charlie")
-      }
+  
      
   
     

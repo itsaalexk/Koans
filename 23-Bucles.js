@@ -142,7 +142,7 @@ describe('23-Bucles.js', () => {
       }
     }
 
-    expect(cantidadDeVocales).toBe(RellenameCorrectamente)
+    expect(cantidadDeVocales).toBe(12)
     // Pero decide tú lo que más fácil te sea de entender.
   })
 
@@ -150,6 +150,20 @@ describe('23-Bucles.js', () => {
     // Dictador mode on: Aquí sólo puedes usar "for", nada de "while" ^^
     // Vas a crear una función que compara dos strings y nos diga
     // cuantos caracteres tienen en la misma posición.
+
+      const cuentaCaracteres = (string1 , string2) =>{
+          this.string1 = string1;
+          this.string2= string2;
+
+          let stringLength = string1.length;
+          let otraStringLength = string2.length;
+          let caracteres = 0;
+           for (let i = 0;  ;caracteres++){
+
+           }
+
+
+      }
 
 
     expect(cuentaCaracteres).not.toBeUndefined()

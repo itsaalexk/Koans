@@ -32,9 +32,9 @@ describe('12-ElTriangulo.js', () => {
         return ("es escaleno")
       } else if (b === c || a === c || a === b){
         return ("es isósceles")
-      }
+    
     }
-
+  }
 
     expect(tipoDeTriangulo(10, 10, 10)).toBe('es equilátero')
     expect(tipoDeTriangulo(3, 3, 3)).toBe('es equilátero')
@@ -47,10 +47,10 @@ describe('12-ElTriangulo.js', () => {
     // ¡¡¡BONUS TRACK!!!
     // Ahora modifica tu función, para que SÍ ALGUNO de los tres lados es IGUAL A CERO
     // tiene que DEVOLVER "Triángulo imposible"
-    /*expect(tipoDeTriangulo(0, 11, 111)).toBe('Triángulo imposible')
-    expect(tipoDeTriangulo(1, 0, 111)).toBe('Triángulo imposible')
-    expect(tipoDeTriangulo(1, 0, 0)).toBe('Triángulo imposible')
-    expect(tipoDeTriangulo(0, 11, 0)).toBe('Triángulo imposible')*/
+    //expect(tipoDeTriangulo(0, 11, 111)).toBe('Triángulo imposible')
+    //expect(tipoDeTriangulo(1, 0, 111)).toBe('Triángulo imposible')
+    //expect(tipoDeTriangulo(1, 0, 0)).toBe('Triángulo imposible')
+    //expect(tipoDeTriangulo(0, 11, 0)).toBe('Triángulo imposible')
     // Si ves que se te complica mucho, te dejo comentar los 4 últimos expects.
   })
 })
