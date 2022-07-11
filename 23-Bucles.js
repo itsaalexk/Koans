@@ -160,6 +160,21 @@ describe('23-Bucles.js', () => {
     // Dictador mode on: Aquí sólo puedes usar "for", nada de "while" ^^
     // Vas a crear una función que compara dos strings y nos diga
     // cuantos caracteres tienen en la misma posición.
+    function cuentaCaracteres(val1 , val2){
+      let cantidadCaracteres = 0;
+
+
+      for (let i = 0; i > val2 ;i++){
+        cantidadCaracteres[i]
+      }
+
+      
+    
+
+    
+      
+
+    }
 
     
 
@@ -228,11 +243,11 @@ describe('23-Bucles.js', () => {
     }
 
     expect(uglify).not.toBeUndefined()
-    expect(uglify('UnAStrinGSinEsPacioS')).toBe(RellenameCorrectamente)
-    expect(uglify('una stringconunesPaciO')).toBe(RellenameCorrectamente)
-    expect(uglify('una strIng coN mUchos esPacios En bLanco')).toBe(RellenameCorrectamente)
-    expect(uglify('El partido acabo 10-9 ¡AJUSTADISIMO!')).toBe(RellenameCorrectamente)
-    expect(uglify('Este partido han ganado 10-9 y el anterior quedaron empate 9-9')).toBe(RellenameCorrectamente)
+    expect(uglify('UnAStrinGSinEsPacioS')).toBe("unastringsinespacios")
+    expect(uglify('una stringconunesPaciO')).toBe("una-stringconunespacio")
+    expect(uglify('una strIng coN mUchos esPacios En bLanco')).toBe("una-string-con-muchos-espacios-en-blanco")
+    expect(uglify('El partido acabo 10-9 ¡AJUSTADISIMO!')).toBe("el-partido-acabo-10_9-¡ajustadisimo!")
+    expect(uglify('Este partido han ganado 10-9 y el anterior quedaron empate 9-9')).toBe("este-partido-han-ganado-10_9-y-el-anterior-quedaron-empate-9_9")
   })
 
  it('DIY: for of deluxe edition', () => {
@@ -240,6 +255,13 @@ describe('23-Bucles.js', () => {
     // Crea una función que cuente las consonantes en una string ^^
     // Escribe aquí tu función:
     // 'bcdfghjklmnñpqrstvxzwy' ^^
+    const cuentaConsonantes = (string) =>{
+      return "bcdfghjklmnñpqrstvxzyw".includes(string)
+    }
+     
+      
+
+     
 
 
     expect(cuentaConsonantes).not.toBeUndefined()
