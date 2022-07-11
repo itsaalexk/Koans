@@ -258,6 +258,16 @@ describe('23-Bucles.js', () => {
     const cuentaConsonantes = (string) =>{
       return "bcdfghjklmnñpqrstvxzyw".includes(string)
     }
+    let cantidadConsonantes = 0;
+
+    for (let consonanteActual of string){
+
+      if (cuentaConsonantes(consonanteActual)){
+        cantidadConsonantes +=1;
+      }
+    }
+    
+
      
       
 
