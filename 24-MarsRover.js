@@ -19,7 +19,9 @@ describe('24-MarsRover.js', () => {
   // al sur, etc... Nota: Que no se te olvide que se le puede dar una COLECCIÓN
   // de comandos.
   // Pasa, test a test y lee atentamente tanto los tests como los errores.
-  // Escribe tu clase adí abajo:
+  // Escribe tu clase aqui abajo:
+
+  
 
 
   it('existe', () => {

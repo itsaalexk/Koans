@@ -65,8 +65,8 @@ describe('11-If.js', () => {
     let unValor = 'BRO'
     // Rellena la condición entre paréntesis para que ejecute el código
     // en el bloque de código entre llaves (¿Te suena?)
-    if(unValor = false) {
-      unValor = 'DIY'
+    if(unValor) {
+      unValor = 'BRO'
     }
 
     expect(unValor).toBe('BRO')

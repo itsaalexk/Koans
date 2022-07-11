@@ -3,7 +3,7 @@ describe('23-Bucles.js', () => {
   // Los bucles ejecuta un bloque de código "{}" mientras se cumpla una
   // condición. Hay diferentes maneras de escribir un bucle, vamos a ver esas
   // maneras y al mismo tiempo ver cómo funcionan exactamente.
-  it('while', () => {
+ it('while', () => {
     // El bucle "while" es como un "if", pero que ejecuta el bloque de código
     // mientras se cumpla la condición que le pasen.
     let contador = 0
@@ -79,14 +79,24 @@ describe('23-Bucles.js', () => {
     // todas las letras y cambiar los espacios en blanco por "-" a este proceso
     // le llamamos UGLIFICAR... hacer fea una frase ^^
     // Escribe aquí tu función.
-  function uglify(value){
- 
-  } while (value = 'UnAStrinGSinEsPacioS'){
-    const string = 'UnAStrinGSinEsPacioS';
-    const lowerCase = string.toLowerCase();
-    return lowerCase;
-    
-  }
+    function uglify(string){
+      let posicionActual = 0;
+      const ultimaPosicion = string.length -1;
+      let uglyString = "";
+
+      while (posicionActual <= ultimaPosicion){
+        const character = string.charAt(posicionActual)
+            
+        let uglyCharacter = character.replace("-","_")
+        
+        uglyCharacter = uglyCharacter.replace(" ","-")
+        
+        uglyString += uglyCharacter;
+        posicionActual +=1
+      }
+        return uglyString.toLowerCase();
+    }
+
 
     // Recuerda pasa los tests uno a uno, leer bien los expects y los errores.
     expect(uglify).not.toBeUndefined()
@@ -103,7 +113,7 @@ describe('23-Bucles.js', () => {
     expect(uglify('Este partido han ganado 10-9 y el anterior quedaron empate 9-9')).toBe('este-partido-han-ganado-10_9-y-el-anterior-quedaron-empate-9_9')
   })
 
-  it('for', () => {
+ it('for', () => {
     // ¿Recuerdas este bucle?
     let contador = 0
     while (contador < 5) {
@@ -146,10 +156,12 @@ describe('23-Bucles.js', () => {
     // Pero decide tú lo que más fácil te sea de entender.
   })
 
-  it('DIY: for edition', () => {
+ skip('DIY: for edition', () => {
     // Dictador mode on: Aquí sólo puedes usar "for", nada de "while" ^^
     // Vas a crear una función que compara dos strings y nos diga
     // cuantos caracteres tienen en la misma posición.
+
+    
 
    
 
@@ -171,7 +183,7 @@ describe('23-Bucles.js', () => {
     expect(cuentaCaracteres('MEGA BONUS TRACK!')).toBe(0)
   })
 
-  it('for of', () => {
+ it('for of', () => {
     // Calma. Esto no es como el "if else", "for of" es otro tipo de "for".
     // De echo, "for" es un bucle y "for of" es un iterador (espero que tuvieras
     // extra de papel higiénico a mano) ^^
@@ -197,7 +209,7 @@ describe('23-Bucles.js', () => {
       }
     }
 
-    expect(cantidadDeVocales).toBe(RellenameCorrectamente)
+    expect(cantidadDeVocales).toBe(12)
     // Este ejemplo te va a encantar.
     const uglify = function(frase) {
       let result = ''
@@ -223,7 +235,7 @@ describe('23-Bucles.js', () => {
     expect(uglify('Este partido han ganado 10-9 y el anterior quedaron empate 9-9')).toBe(RellenameCorrectamente)
   })
 
-  it('DIY: for of deluxe edition', () => {
+ it('DIY: for of deluxe edition', () => {
     // Dictador mega on: Aquí sólo puedes usar "for on".
     // Crea una función que cuente las consonantes en una string ^^
     // Escribe aquí tu función:
