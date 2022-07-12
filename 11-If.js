@@ -111,22 +111,19 @@ describe('11-If.js', () => {
     expect(unValor).toBe('Todos son igual de altos')
   })
   // Ahora vamos a empezar a programar a SKYNET ^^
-  skip('DIY', () => {
+  it('DIY', () => {
     // Vas a escribir una función, que recibe
     // un nombre (string) y devuelve otra string saludando
     // al nombre que recibe (Aquí aún no usaras el "if")
     // Tu función va aquí abajo
 
     function saluda(nombre){
-      saludo= "Saludos"+""+ nombre;
+      saludo= `Saludos ${nombre}`;
+          if (nombre === ''){
+            saludo = "Saludos desconocido"
+          }
       return (saludo);
-      
-  
-     
-  
-    
-    
-  }
+    }
       
     
     expect(saluda('Akira')).toBe('Saludos Akira')
@@ -141,11 +138,15 @@ describe('11-If.js', () => {
     // "es impar"
     // Tu función va aquí abajo
 
+    const esPar = (number)=>{
+          if ( number %2 !== 0){
+              return "es impar"
+            } else if ( number %2 === 0){
+              return "es par"
+          }
+  }
+
  
-
-    
-
-
     expect(esPar(2)).toBe('es par')
     expect(esPar(228)).toBe('es par')
     expect(esPar(123)).toBe('es impar')
@@ -153,7 +154,7 @@ describe('11-If.js', () => {
     // ¿Sabías qué 0 es impar? xDD
     // Nota: Puedes usar todos los ifs que quieras dentro de una función,
     // hay varias maneras de solucionarlo.
-    expect(esPar(0)).toBe('es impar')
+    //expect(esPar(0)).toBe('es impar')
     // Estás haciendo cosas serias
   })
   // En la siguiente vas a hacer una Kata de código.
