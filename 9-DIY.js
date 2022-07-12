@@ -20,9 +20,17 @@ describe('9-DIY.js', () => {
     expect(esPar(1234)).toBe(true)
   })
   // ¡¡¡A PROGRAMAR!!!
-  skip('crea una función que nos diga si un número es impar', () => {
+  it('crea una función que nos diga si un número es impar', () => {
     // Fácil, ¿No?
     // Escribe tu código aquí.
+
+    const esImpar = (number) =>{
+        if (number %2 !== 0){
+          return true
+        } else if (number %2 === 0){
+          return false;
+        }
+    }
   
      
 

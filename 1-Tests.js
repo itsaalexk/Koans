@@ -24,7 +24,7 @@ describe('1-Tests.js', () => {
   // ¡Bien! Has puesto en verde tu primer test, seguro que lo has podido comprobar
   // en tu navegador. ¡Ahora a ponerlos todos en verde!
   // ¡Cuidado, este test es muy difícil!
-  skip('Pues no es tan difícil', () => {
+  it('Pues no es tan difícil', () => {
     // Ok. Como se puede ver no es tan difícil como parece.
     // Aprovecho para explicar una situación con la que te puedes encontrar.
     // Imaginate, que estas con un test y que es realmente difícil de poner
@@ -44,7 +44,7 @@ describe('1-Tests.js', () => {
     // empieza el test (que es el "it") cambia el "it" por "skip", si guardas y
     // miras el navegador verás que está en gris y te dará error el siguiente test.
     // El día que lo quieras retomar, sencillamente revierte el cambio. skip -> it
-    expect(skip).toBe('Pues no es tan difícil')
+    expect('Pues no es tan difícil').toBe('Pues no es tan difícil')
 
     
   })

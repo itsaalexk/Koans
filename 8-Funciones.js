@@ -32,7 +32,7 @@ describe('8-Funciones.js', () => {
     // Nota: Hay más maneras de definir funciones, las veremos ;)
   })
 
-  skip('el resultado de ejecutar las funciones también se puede asignar en variables', () => {
+  it('el resultado de ejecutar las funciones también se puede asignar en variables', () => {
     let operacionCompleja = function(unNumero, otroNumero) {
       return unNumero + otroNumero * unNumero / otroNumero
     }
@@ -41,13 +41,13 @@ describe('8-Funciones.js', () => {
     // esta variable ya es como cualquier otra, pero en lugar de contener
     // el resultado de una operación directamente, se guarda el resultado
     //  de ejecutar nuestra función.
-    expect(resultado).toBe(687)
-    expect(resultado + 1).toBe(688)
+    expect(resultado).toBe(40)
+    expect(resultado + 1).toBe(41)
 
     let otroResultado = operacionCompleja(89, 123)
 
-    expect(otroResultado).toBe(RellenameCorrectamente)
-    expect(resultado + otroResultado).toBe(RellenameCorrectamente)
+    expect(otroResultado).toBe(178)
+    expect(resultado + otroResultado).toBe(218)
   })
 
   it('que puede contener las funciones', () => {
