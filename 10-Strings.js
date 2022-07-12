@@ -118,21 +118,17 @@ describe('10-Strings.js', () => {
     // gastan mucho las comillas simples cuando escriben (Ej: don't)
   })
 
-  skip('DIY', () => {
+  it('DIY', () => {
     // Vamos a juntar todo lo que sabemos un poco (para que no se olvide :)
     // Crea una función que le pasemos dos cadenas de text y devuelva
     // true si son iguales y false si no lo son. Fácil, ¿no?
     // Escribe aquí tu código
-
-    function sonIguales(string11 , string22){
-
-      if (string11 === string22){
-        return true;
-      } else{
+    const sonIguales = ( a , b) =>{
+      if (a !== b){
         return false;
+      } else if ( a === b){
+        return true
       }
-
-  
     }
 
 
@@ -141,6 +137,14 @@ describe('10-Strings.js', () => {
     // Ahora crea una función que le pasemos dos strings y nos devuelva
     // una string que sea la suma de las dos pasadas y todo en minúsculas.
     // Escribe aquí tu código
+    const sumaEnMinusclas = (unaString , otraString) =>{
+      let num1= unaString.toString().toLowerCase();
+      let num2 =otraString.toString().toLowerCase();
+       let resultado = num1+num2;
+       return resultado
+      
+
+    }
   
 
   
