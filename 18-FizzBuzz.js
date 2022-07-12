@@ -36,6 +36,19 @@ describe('18-FizzBuzz.js', () => {
   // tu cuenta.
 
   // Escribe aquí abajo tu función
+  const fizzBuzz = (number) =>{
+    
+    if (number %3 === 0 && number % 5 === 0){
+      return "FizzBuzz"
+    } else if (number % 3 === 0){
+      return "Fizz"
+    } else if ( number %  5 === 0){
+      return "Buzz"
+    } else {
+      return number
+    }
+    
+  }
 
 
     
@@ -45,19 +58,19 @@ describe('18-FizzBuzz.js', () => {
 
   // Recuerda ir pasando una a uno cada expect. Sin prisa, escribe un poco
   // de código, prueba si funciona y escribe un poco más para pasar al siguiente.
-  skip('devuelve "Fizz" si el número es divisible entre 3', () => {
+  it('devuelve "Fizz" si el número es divisible entre 3', () => {
     expect(fizzBuzz(3)).toBe("Fizz")
     expect(fizzBuzz(6)).toBe("Fizz")
     expect(fizzBuzz(33)).toBe("Fizz")
   })
 
-  skip('devuelve "Buzz" si el número es divisible entre 5', () => {
+  it('devuelve "Buzz" si el número es divisible entre 5', () => {
     expect(fizzBuzz(5)).toBe("Buzz")
     expect(fizzBuzz(10)).toBe("Buzz")
     expect(fizzBuzz(560)).toBe("Buzz")
   })
 
-  skip('devuelve "FizzBuzz" si el número es divisible entre 3 y 5', () => {
+  it('devuelve "FizzBuzz" si el número es divisible entre 3 y 5', () => {
     expect(fizzBuzz(15)).toBe("FizzBuzz")
     expect(fizzBuzz(30)).toBe("FizzBuzz")
     expect(fizzBuzz(15000)).toBe("FizzBuzz")
