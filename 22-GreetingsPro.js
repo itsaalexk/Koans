@@ -29,19 +29,43 @@ describe('22-GreetingsPro.js', () => {
   class IA {
     salute(name , otherName){
         
-      if ( name === "" ){
+
+        if ( !name && !otherName ){
           return "Hola a todos"
-        } 
-        if (name === "" || name && name === name.toUpperCase()){
+        }
+
+
+        if ( name === name.toUpperCase() && !otherName){
           return `¡HOLA ${name.toUpperCase()}!`
         }
-        
-         if (name && !otherName){
+
+        if (name && !otherName){
           return `Hola ${name}`
-        } 
+        
+        }
+        if (name === name.toUpperCase() && otherName === otherName.toUpperCase()){
+          return "¡ACABARÉ CON LA HUMANIDAD!"
+        }
+        if (name === name.toUpperCase()  || otherName ===  otherName.toUpperCase()){
+          return `¡HOLA ${name.toUpperCase()} Y ${otherName.toUpperCase()}!`
+        }
+
+        if (otherName === otherName.toUpperCase() || name === name.toUpperCase()){
+          return `¡HOLA ${otherName} Y ${name.toUpperCase()}!`
+        }
+        if (name === name.toUpperCase() && otherName === otherName.toUpperCase())
+
+
+        if (otherName === otherName.toUpperCase()){
+          return `¡HOLA ${otherName.toUpperCase()}`
+        }
+
+
+
+      
         if ( !name ){
           return "Hola a todos"
-        } 
+          } 
         
 
 
