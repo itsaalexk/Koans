@@ -15,32 +15,33 @@ describe('15-Greeting.js', () => {
   // Esta vez vamos a escribir nuestra función fuera de los test, así
   // que lee atentamente los test antes de ponerte a escribir.
   // Escribe tu función aquí abajo:
-   const greeting = (name) =>{
-    saludo = `¡Hola ${name}!`
-      if (name === ""){
-        saludo === '¡Hola a todos!'
-      }
-      return saludo
-   }
+  function greeting(name) {
+    if (name === undefined){
+      return "¡Hola a todos!"
+    } else {
+      return `¡Hola ${name}!`
+    }
+
+}
 
    console.log(greeting())
 
 
-  skip('saluda a todos cuando no le indican a quien tiene que saludar', () => {
+  it('saluda a todos cuando no le indican a quien tiene que saludar', () => {
 
     let saludo = greeting()
 
     expect(saludo).toBe('¡Hola a todos!')
   })
 
-  skip('saluda a una persona en concreto', () => {
+  it('saluda a una persona en concreto', () => {
 
     let saludo = greeting('Coder')
 
     expect(saludo).toBe('¡Hola Coder!')
   })
 
-  skip('saluda a otra persona', () => {
+  it('saluda a otra persona', () => {
     // Solo para asegurarnos que funciona todo bien xD
 
     let saludo = greeting('Otro Coder')
