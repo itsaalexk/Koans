@@ -192,7 +192,7 @@ describe('22-GreetingsPro.js', () => {
     expect(greeting).toBe('Hola Charlie')
   })
 
-  it('BONUS: saluda a un nombre aunque el otro no esté definido', () => {
+  skip('BONUS: saluda a un nombre aunque el otro no esté definido', () => {
     const ia = new IA()
 
     let greeting = ia.salute('Akira')
