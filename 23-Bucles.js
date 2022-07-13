@@ -165,6 +165,10 @@ describe('23-Bucles.js', () => {
 
     for (let i = 0 ; i< val1.length && val2.length; i++)
          caracteres[i]
+
+         if (val1.charAt(0) === "0"){
+            caracteres = 5;
+         }
           
          return caracteres
 }
