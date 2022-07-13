@@ -259,6 +259,7 @@ describe('23-Bucles.js', () => {
       if (cuentaConsonantes(consonanteActual)){
         cantidadConsonantes +=1;
       }
+      return cantidadConsonantes
     }
     
 

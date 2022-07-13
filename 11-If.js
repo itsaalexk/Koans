@@ -119,10 +119,10 @@ describe('11-If.js', () => {
 
     function saluda(nombre){
       saludo= `Saludos ${nombre}`;
-          if (nombre === ''){
-            saludo = "Saludos desconocido"
+          if (nombre === ""){
+            saludo === "Saludos desconocido"
           }
-      return (saludo);
+      return saludo;
     }
       
     
