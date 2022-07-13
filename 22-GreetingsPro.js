@@ -26,8 +26,34 @@ describe('22-GreetingsPro.js', () => {
   // SI nos pasan una STRING y SI está en MAYÚSCULAS, la función DEVOLVERÁ: ¡HOLA <STRING>!
   // SI nos pasan dos STRINGS y SI una de ellas está en mayúsculas función DEVOLVERÁ: ¡HOLA <STRING> Y <STRING>!
   // Define aquí abajo tu clase para la I.A
+  class IA {
+    salute(name , otherName){
+        
+      if ( name === "" ){
+          return "Hola a todos"
+        } 
+        if (name === "" || name && name === name.toUpperCase()){
+          return `¡HOLA ${name.toUpperCase()}!`
+        }
+        
+         if (name && !otherName){
+          return `Hola ${name}`
+        } 
+        if ( !name ){
+          return "Hola a todos"
+        } 
+        
 
 
+        
+        
+        return `Hola ${name} y ${otherName}`
+    }
+    
+    
+  }
+
+  
   
   
 
@@ -35,11 +61,11 @@ describe('22-GreetingsPro.js', () => {
   // Recuerda, mira el error del primer test, soluciona SOLO ese problema
   // y luego pasa al siguiente... y repite. UNO A UNO, POCO A POCO y LEYENDO
   // CON ATENCIÓN ¡HUMAN!
-  skip('la clase IA esta definida', () => {
+  it('la clase IA esta definida', () => {
     expect(IA).not.toBeUndefined()
   })
 
-  skip('se pueden crear nuevas IAs', () => {
+  it('se pueden crear nuevas IAs', () => {
 
     const nuevaIA = new IA()
 
@@ -50,7 +76,7 @@ describe('22-GreetingsPro.js', () => {
   })
 
   // SI nos pasan una STRING, la función DEVOLVERÁ: Hola <STRING>.
-  skip('saluda a un nombre', () => {
+  it('saluda a un nombre', () => {
     const ia = new IA()
 
     const greeting = ia.salute('Akira')
@@ -58,7 +84,7 @@ describe('22-GreetingsPro.js', () => {
     expect(greeting).toBe('Hola Akira')
   })
 
-  skip('saluda a otro nombre', () => {
+  it('saluda a otro nombre', () => {
     const ia = new IA()
 
     const greeting = ia.salute('Charlie')
@@ -67,7 +93,7 @@ describe('22-GreetingsPro.js', () => {
   })
 
   // SI nos pasan dos STRINGS, la función DEVOLVERÁ: Hola <STRING> y <STRING>.
-  skip('saluda a dos personas', () => {
+  it('saluda a dos personas', () => {
     const ia = new IA()
 
     const greeting = ia.salute('Charlie', 'Akira')
@@ -75,7 +101,7 @@ describe('22-GreetingsPro.js', () => {
     expect(greeting).toBe('Hola Charlie y Akira')
   })
 
-  skip('saluda a otras dos personas', () => {
+  it('saluda a otras dos personas', () => {
     const ia = new IA()
 
     const greeting = ia.salute('Akira', 'Charlie')
@@ -84,7 +110,7 @@ describe('22-GreetingsPro.js', () => {
   })
 
   // SI nos pasan una STRING VACÍA, la función DEVOLVERÁ: Hola a todos.
-  skip('saluda a todo el mundo cuando se le dice que salude a nadie', () => {
+  it('saluda a todo el mundo cuando se le dice que salude a nadie', () => {
     const ia = new IA()
 
     const greeting = ia.salute('')
@@ -93,7 +119,7 @@ describe('22-GreetingsPro.js', () => {
   })
 
   // SI nos pasan un UNDEFINED, la función DEVOLVERÁ: Hola a todos.
-  skip('saluda a todo el mundo cuando no se le dice a quien saludar', () => {
+  it('saluda a todo el mundo cuando no se le dice a quien saludar', () => {
     const ia = new IA()
 
     const greeting = ia.salute()
@@ -102,7 +128,7 @@ describe('22-GreetingsPro.js', () => {
   })
 
   // SI nos pasan una STRING y SI está en MAYÚSCULAS, la función DEVOLVERÁ: ¡HOLA <STRING>!
-  skip('saluda gritando cuando se le dice un nombre gritando', () => {
+  it('saluda gritando cuando se le dice un nombre gritando', () => {
     const ia = new IA()
 
     const greeting = ia.salute('AKIRA')
@@ -111,7 +137,7 @@ describe('22-GreetingsPro.js', () => {
     expect(greeting).toBe('¡HOLA AKIRA!')
   })
 
-  skip('saluda gritando cuando se le dice algún nombre gritando', () => {
+  it('saluda gritando cuando se le dice algún nombre gritando', () => {
     const ia = new IA()
 
     const greeting = ia.salute('akira', 'CHARLIE')
@@ -122,7 +148,7 @@ describe('22-GreetingsPro.js', () => {
 
 
   // SI nos pasan dos STRINGS y SI una de ellas está en mayúsculas función DEVOLVERÁ: ¡HOLA <STRING> Y <STRING>!
-  skip('saluda gritando cuando se le dice algún otro nombre gritando', () => {
+  it('saluda gritando cuando se le dice algún otro nombre gritando', () => {
     const ia = new IA()
 
     const greeting = ia.salute('AKIRA', 'Charlie')
@@ -132,7 +158,7 @@ describe('22-GreetingsPro.js', () => {
 
   // Y si los dos nombres están en mayúsculas, hará una cosa especial que ya verás...
   // Ya pensabas que se me olvido ;)
-  skip('descubre su verdadero plan, cuando se le dice que salude a dos nombres gritando', () => {
+  it('descubre su verdadero plan, cuando se le dice que salude a dos nombres gritando', () => {
     const ia = new IA()
 
     const greeting = ia.salute('AKIRA', 'CHARLIE')
@@ -142,7 +168,7 @@ describe('22-GreetingsPro.js', () => {
   })
   // CLAP!... CLAP!... CLAP!... ¡VIVA! Llegar aquí no es nada, nada fácil.
   // Aunque si piensas que no se puede complicar más, sigue o usa "skip" para saltar los tests.
-  skip('BONUS: saluda a un nombre aunque el otro este vacio', () => {
+  it('BONUS: saluda a un nombre aunque el otro este vacio', () => {
     const ia = new IA()
 
     let greeting = ia.salute('Akira', '')
@@ -154,7 +180,7 @@ describe('22-GreetingsPro.js', () => {
     expect(greeting).toBe('Hola Charlie')
   })
 
-  skip('BONUS: saluda a un nombre aunque el otro no esté definido', () => {
+  it('BONUS: saluda a un nombre aunque el otro no esté definido', () => {
     const ia = new IA()
 
     let greeting = ia.salute('Akira')
