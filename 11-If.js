@@ -111,19 +111,20 @@ describe('11-If.js', () => {
     expect(unValor).toBe('Todos son igual de altos')
   })
   // Ahora vamos a empezar a programar a SKYNET ^^
-  it('DIY', () => {
+ it('DIY', () => {
     // Vas a escribir una función, que recibe
     // un nombre (string) y devuelve otra string saludando
     // al nombre que recibe (Aquí aún no usaras el "if")
     // Tu función va aquí abajo
 
-    function saluda(nombre){
-      saludo= `Saludos ${nombre}`;
-          if (nombre === ""){
-            saludo === "Saludos desconocido"
-          }
-      return saludo;
-    }
+ function saluda(name) {
+      if (name === ""){
+        return "Saludos desconocido"
+      } else {
+        return `Saludos ${name}`
+      }
+
+ }
       
     
     expect(saluda('Akira')).toBe('Saludos Akira')
