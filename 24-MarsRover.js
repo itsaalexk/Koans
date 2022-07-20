@@ -42,12 +42,12 @@ class MarsRover {
             if(this.direccion === "Norte"){
                 this.direccion = "Oeste"
             }
+        } if (orden === "ii"){
+            if (this.direccion === "Norte"){
+              this.direccion = "Sur"
+            }
         }
-        if (orden === "ii"){
-          if (this.direccion === "Norte"){
-            this.direccion ="Sur"
-          }
-        }
+
         
     }
   
