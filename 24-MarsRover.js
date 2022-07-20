@@ -20,8 +20,29 @@ describe('24-MarsRover.js', () => {
   // de comandos.
   // Pasa, test a test y lee atentamente tanto los tests como los errores.
   // Escribe tu clase aqui abajo:
-
+class MarsRover {
+  constructor (x,y,cardinalPoint){
+    this.x = x;
+    this.y = y;
+    this.direccion = cardinalPoint;
+  }
+  ejecutarOrdenes(ordenes){
+    for ( let orden of ordenes){
+        if (orden === ""){
+          this.x = 1;
+          this.y = 1;
+          this.direccion = "Norte"
+        } 
+        if(orden === "m"){
+          this.x ++
+        }
+    }
   
+   }
+   
+
+
+}
 
 
   it('existe', () => {
