@@ -156,28 +156,13 @@ describe('23-Bucles.js', () => {
     // Pero decide tú lo que más fácil te sea de entender.
   })
 
- it('DIY: for edition', () => {
+ skip('DIY: for edition', () => {
     // Dictador mode on: Aquí sólo puedes usar "for", nada de "while" ^^
     // Vas a crear una función que compara dos strings y nos diga
     // cuantos caracteres tienen en la misma posición.
-   const cuentaCaracteres = (val1 , val2) =>{
-    let caracteres = 0;
-
-    for (let i = 0 ; i< val1.length && val2.length; i++)
-         caracteres[i]
-
-         if (val1.charAt(0) === "0"){
-            caracteres = 5;
-         }
-          
-         return caracteres
-}
-    
-    console.log(cuentaCaracteres("2222","3434343"));
-    
-
+ 
    
-
+  
     expect(cuentaCaracteres).not.toBeUndefined()
     expect(cuentaCaracteres('unaString', '          ')).toBe(0)
     expect(cuentaCaracteres('', 'unaString')).toBe(0)
@@ -253,25 +238,17 @@ describe('23-Bucles.js', () => {
     // Crea una función que cuente las consonantes en una string ^^
     // Escribe aquí tu función:
     // 'bcdfghjklmnñpqrstvxzwy' ^^
-    const cuentaConsonantes = (string) =>{
-      return "bcdfghjklmnñpqrstvxzyw".includes(string)
+    function cuentaConsonantes(character){
+      return "bcdfghjklmnñpqrstvxzyw".includes(character)
     }
-    let cantidadConsonantes = 0;
-
-    for (let consonanteActual of string){
-
-      if (cuentaConsonantes(consonanteActual)){
-        cantidadConsonantes +=1;
-      }
-      return cantidadConsonantes
-    }
+    let cantidadDeConsonantes = 0
     
-
-     
-      
-
-     
-
+    for( caracterActual of unaString) {
+      if (cuentaConsonantes(caracterActual)) {
+        cantidadDeConsonantes += 1
+      }
+      return cantidadDeConsonantes
+    }
 
     expect(cuentaConsonantes).not.toBeUndefined()
     expect(cuentaConsonantes('')).toBe(0)
