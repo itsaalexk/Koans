@@ -49,6 +49,16 @@ class MarsRover {
               this.direccion = "Norte"
             }
         
+        }if (orden === "d"){
+          if (this.direccion === "Norte"){
+            this.direccion = "Este"
+          } else if(this.direccion === "Este"){
+            this.direccion = "Sur"
+          } else if ( this.direccion === "Sur"){
+            this.direccion = "Oeste"
+          } else if (this.direccion === "Oeste"){
+            this.direccion = "Norte"
+          }
         }
 
         
@@ -285,6 +295,6 @@ class MarsRover {
   // Aunque siempre podemos hacer un ¡BONUS TRACK!
   it('BONUS TRACK: ...', () => {
     // ¡Va! ¿No fue suficiente?
-    expect('El bonus track para otro día, ahora a descansar ^^').toBe(RellenameCorrectamente)
+    expect('El bonus track para otro día, ahora a descansar ^^').toBe('El bonus track para otro día, ahora a descansar ^^')
   })
 })
