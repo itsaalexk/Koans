@@ -25,6 +25,17 @@ describe('26-GreetingsMegaPro.js', () => {
   //   con el saludo anterior (en el test, se verá bastante más claro).
   // Escribe aquí abajo tu clase (Nota: Puedes mirar lo anterior, pero no copies y
   // pegues, por si se te había pasado por la cabeza :)
+  class IA {
+    saluda([name , name2]){
+        if (!name && !name2){
+          return "¡Hola a todos!"
+        }else if (name && !name2){
+          return `¡Hola! ${name}`
+        } else if (name && name2){
+          return `¡Hola! ${name} y ${name2}`
+        }
+    }
+  }
 
 
   // Estos primeros para no perder la costumbre de ir poco a poco.

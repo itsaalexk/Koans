@@ -34,8 +34,6 @@ describe('22-GreetingsPro.js', () => {
           return "Hola a todos"
         }
 
-
-
         if ( name === name.toUpperCase() && !otherName){
           return `¡HOLA ${name.toUpperCase()}!`
         }

@@ -156,11 +156,19 @@ describe('23-Bucles.js', () => {
     // Pero decide tú lo que más fácil te sea de entender.
   })
 
- skip('DIY: for edition', () => {
+ it('DIY: for edition', () => {
     // Dictador mode on: Aquí sólo puedes usar "for", nada de "while" ^^
     // Vas a crear una función que compara dos strings y nos diga
     // cuantos caracteres tienen en la misma posición.
- 
+    const cuentaCaracteres = (string1 , string2)=>{
+      let caracteres = 0;
+        for (let i = 0 ; i< string1.lenght-1; i++){
+                caracteres+=i
+              }
+        
+        return caracteres
+    }
+
    
   
     expect(cuentaCaracteres).not.toBeUndefined()
