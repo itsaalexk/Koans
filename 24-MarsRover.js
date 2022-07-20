@@ -28,14 +28,27 @@ class MarsRover {
   }
   ejecutarOrdenes(ordenes){
     for ( let orden of ordenes){
-        if (orden === ""){
-          this.x = 1;
-          this.y = 1;
-          this.direccion = "Norte"
-        } 
-        if(orden === "m"){
-          this.x ++
+        if (orden === "m"){
+            if(this.direccion ==="Norte"){
+                this.y++
+            }else if (this.direccion=== "Este"){
+                this.x ++
+            }else if (this.direccion === "Oeste"){
+              this.x--
+            }else if(this.direccion === "Sur"){
+                this.y--
+            }
+        }if (orden === "i"){
+            if(this.direccion === "Norte"){
+                this.direccion = "Oeste"
+            }
         }
+        if (orden === "ii"){
+          if (this.direccion === "Norte"){
+            this.direccion ="Sur"
+          }
+        }
+        
     }
   
    }
