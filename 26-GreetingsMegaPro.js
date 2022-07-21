@@ -27,15 +27,15 @@ describe('26-GreetingsMegaPro.js', () => {
   // pegues, por si se te había pasado por la cabeza :)
   class IA {
     saluda(names){
-        if (!names[0] && !names[1]){
-          return "¡Hola a todos!"
-        }else if (names[0] && !names[1]){
-          return `¡Hola! ${names[0]}`
-        } else if (names[0] && names[1]){
-          return `¡Hola! ${names[0]} y ${names[1]}`
-        } else if (names[0] && names[1] && names[2]){
-          return`¡Hola ${names[0]},${names[1]},${names[2]}!`
-        }
+          if (names.length === 0){
+            return `¡Hola a todos!`
+          } else if (names.length === 1){
+            return `¡Hola! ${names}`
+          } else if (names.length === 2){
+            return `¡Hola! ${names[0]} y ${names[1]}`
+          } else if (names.length === 3){
+            return `¡Hola! ${names[0]}, ${names[1]} y ${names[2]}`
+          }
     }
   }
 
