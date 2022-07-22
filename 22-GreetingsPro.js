@@ -44,21 +44,21 @@ describe('22-GreetingsPro.js', () => {
         if (name === name.toUpperCase() && otherName === otherName.toUpperCase()){
           return "¡ACABARÉ CON LA HUMANIDAD!"
         }
-        if (!name ||!otherName){
+
+        if (!name || !otherName){
           return `Hola ${otherName}`
         }
+
         if (name === name.toUpperCase()  || otherName ===  otherName.toUpperCase()){
         return `¡HOLA ${name.toUpperCase()} Y ${otherName.toUpperCase()}!`
         }
-
         if (otherName === otherName.toUpperCase()){
           return `¡HOLA ${otherName.toUpperCase()}`
         }
-
-
-
-        
-         return `Hola ${name} y ${otherName}`
+        if (!name && otherName || !otherName && name){
+          return `Hola ${otherName}`
+        }
+        return `Hola ${name} y ${otherName}`
     }
     
     
