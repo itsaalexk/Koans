@@ -44,18 +44,19 @@ describe('22-GreetingsPro.js', () => {
         if (name === name.toUpperCase() && otherName === otherName.toUpperCase()){
           return "¡ACABARÉ CON LA HUMANIDAD!"
         }
+        if (!name ||!otherName){
+          return `Hola ${otherName}`
+        }
         if (name === name.toUpperCase()  || otherName ===  otherName.toUpperCase()){
         return `¡HOLA ${name.toUpperCase()} Y ${otherName.toUpperCase()}!`
         }
-        if (otherName === otherName.toUpperCase() || name === name.toUpperCase()){
-         return `¡HOLA ${otherName} Y ${name.toUpperCase()}!`
-        }
+
         if (otherName === otherName.toUpperCase()){
           return `¡HOLA ${otherName.toUpperCase()}`
         }
-        if ( !name ){
-          return "Hola a todos"
-          } 
+
+
+
         
          return `Hola ${name} y ${otherName}`
     }
@@ -178,7 +179,7 @@ describe('22-GreetingsPro.js', () => {
   })
   // CLAP!... CLAP!... CLAP!... ¡VIVA! Llegar aquí no es nada, nada fácil.
   // Aunque si piensas que no se puede complicar más, sigue o usa "skip" para saltar los tests.
-  skip('BONUS: saluda a un nombre aunque el otro este vacio', () => {
+  it('BONUS: saluda a un nombre aunque el otro este vacio', () => {
     const ia = new IA()
 
     let greeting = ia.salute('Akira', '')
@@ -190,7 +191,7 @@ describe('22-GreetingsPro.js', () => {
     expect(greeting).toBe('Hola Charlie')
   })
 
-  skip('BONUS: saluda a un nombre aunque el otro no esté definido', () => {
+  it('BONUS: saluda a un nombre aunque el otro no esté definido', () => {
     const ia = new IA()
 
     let greeting = ia.salute('Akira')
