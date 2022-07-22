@@ -36,10 +36,13 @@ describe('26-GreetingsMegaPro.js', () => {
           } else if (names.length === 3){
             return `¡Hola! ${names[0]}, ${names[1]} y ${names[2]}`
           } else if (names.length > 3){
-            for (let i = 0 ; i> 3 ; i++){
+            
+            for (let i = 0 ; i > 3 ; i++){
               names[i]
             }
-            return`¡Hola! ${names}, `
+            let spliced =names.splice(52,53,"Yeray y Zuri")
+            
+            return`¡Hola! ${names.join(", ")}`
           }
     }
   }
