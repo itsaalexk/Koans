@@ -201,12 +201,23 @@ describe('27-StringsEpisodioIII.js', () => {
     // El primero será la String a partir y la segunda el separador
     // por el que queremos partir.
     // Escribe aquí abajo tu función:
-   const miSplit =(strings , separator)=>{
+  /* const miSplit =(strings , separator)=>{
     let array = new Array()
       for (let string of strings){
-       let replaced = string.replaceAll(separator,",")
+       let replaced = string.replaceAll(separator)
        array.push(replaced)
-       console.log(array)
+       
+      }
+      return array
+   }*/
+
+  const miSplit =(string , separator)=>{
+      let array = new Array();
+      for (let i = 0 ; i< string.length ; i++){
+        let char = string[i]
+        if ( char !== separator){
+          array.push(char)
+        }
       }
       return array
    }
