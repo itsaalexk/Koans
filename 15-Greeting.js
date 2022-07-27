@@ -24,7 +24,7 @@ describe('15-Greeting.js', () => {
 
 }
 
-   console.log(greeting())
+   
 
 
   it('saluda a todos cuando no le indican a quien tiene que saludar', () => {
