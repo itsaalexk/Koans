@@ -10,16 +10,11 @@ class MiString {
   constructor(number){
     this.number = number
   }
-  suma(string, string2) {
+  suma() {
     
-    if (!string){
-      return 0
-    }else if (isNaN(string) && isNaN(string2)) {
-        return parseInt(this.number)
-    }
-
-    return string + string2
+   
   }
+  
 }
 
   // Las fáciles primero
@@ -43,7 +38,7 @@ class MiString {
     expect(total).toBe(0)
   })
 
- skip('suma el valor del número con el que se construye', () => {
+ it('suma el valor del número con el que se construye', () => {
     const miString = new MiString('1')
     // Recuerda el 20-Clases101.js y las variables de clase con this.
     // Yo, lo recuerdo... por si acaso ^^
@@ -52,7 +47,7 @@ class MiString {
     expect(total).toBe(1)
   })
 
- skip('suma el valor de los números con los que se construye', () => {
+ it('suma el valor de los números con los que se construye', () => {
     const miString = new MiString('2,8')
     // Split, split, split... ^^
     const total = miString.suma()
@@ -60,7 +55,7 @@ class MiString {
     expect(total).toBe(10)
   })
 
- skip('suma el valor de otros números con los que se construye', () => {
+ it('suma el valor de otros números con los que se construye', () => {
     const miString = new MiString('22,666')
 
     const total = miString.suma()
@@ -68,7 +63,7 @@ class MiString {
     expect(total).toBe(688)
   })
 
- skip('suma el valor de más números con los que se contruye', () => {
+ it('suma el valor de más números con los que se contruye', () => {
     const miString = new MiString('2,2,62,6,6')
 
     const total = miString.suma()
@@ -76,7 +71,7 @@ class MiString {
     expect(total).toBe(78)
   })
 
- skip('suma el valor de los números QUE PUEDE separar', () => {
+ it('suma el valor de los números QUE PUEDE separar', () => {
     const miString = new MiString('2,2,6-2,6,6')
 
     const total = miString.suma()
@@ -84,7 +79,7 @@ class MiString {
     expect(total).toBe(16)
   })
 
- skip('puede añadir nuevos separadores', () => {
+ it('puede añadir nuevos separadores', () => {
     const miString = new MiString('2-25-6-6-6')
 
     miString.anyadirSeparador('-')
@@ -92,7 +87,7 @@ class MiString {
     expect(miString.suma()).toBe(45)
   })
 
- skip('puede añadir más separadores', () => {
+ it('puede añadir más separadores', () => {
     const miString = new MiString('2*5*7*6')
 
     miString.anyadirSeparador('*')
@@ -100,7 +95,7 @@ class MiString {
     expect(miString.suma()).toBe(20)
   })
 
- skip('separa por los separadores que se añaden más el por defecto ","', () => {
+ it('separa por los separadores que se añaden más el por defecto ","', () => {
     // Este test, tiene lo más interesante de esta kata.
     // Aunque todo lo anterior ha estado bastante bien ^^
     const miString = new MiString('28-2,6-6,6')
@@ -110,7 +105,7 @@ class MiString {
     expect(miString.suma()).toBe(48)
   })
 
- skip('separa por todos los separadores que se añaden más el por defecto', () => {
+ it('separa por todos los separadores que se añaden más el por defecto', () => {
     const miString = new MiString('2-2,60/6,6')
     // Si el anterior te lo pensastes bien, este sale gratis ;P
     miString.anyadirSeparador('-')
@@ -119,7 +114,7 @@ class MiString {
     expect(miString.suma()).toBe(76)
   })
   // Por si hiciste algún hack, que no me fio ^^
- skip('separa por todos los separadores que se añaden más el por defecto', () => {
+ it('separa por todos los separadores que se añaden más el por defecto', () => {
     const miString = new MiString('22,6,"1=4-1')
 
     miString.anyadirSeparador('"')
@@ -129,7 +124,7 @@ class MiString {
     expect(miString.suma()).toBe(34)
   })
 
- skip('BONUS TRACK!!!!!!!!!!!!!', () => {
+ it('BONUS TRACK!!!!!!!!!!!!!', () => {
     const miString = new MiString('2-2,60/6,6')
 
     miString.anyadirSeparador('-')
