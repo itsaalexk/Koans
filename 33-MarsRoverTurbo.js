@@ -20,7 +20,7 @@ describe('33-MarsRoverTurbo.js', () => {
   // hubiera quedado mirando al oeste y si girara otra vez, se quedaría mirando
   // al sur, etc...
   // Pasa, test a test y lee atentamente tanto los tests como los errores.
-  // Escribe tu clase adí abajo:
+  // Escribe tu clase aqui abajo:
 
 
   it('existe', () => {
