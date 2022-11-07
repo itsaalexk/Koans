@@ -147,7 +147,7 @@ describe('8-Funciones.js', () => {
     // Retomando lo de poner varios returns para devolver varias cosas
     let funcionConVariosReturns = function() {
       return 142
-      return 143
+      
     }
     // El primer return que se ejecuta marca el fin de la función, todo el
     // código que pongas después, no se ejecutará.

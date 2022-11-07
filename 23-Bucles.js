@@ -156,7 +156,7 @@ describe('23-Bucles.js', () => {
     // Pero decide tú lo que más fácil te sea de entender.
   })
 
- skip('DIY: for edition', () => {
+ it('DIY: for edition', () => {
     // Dictador mode on: Aquí sólo puedes usar "for", nada de "while" ^^
     // Vas a crear una función que compara dos strings y nos diga
     // cuantos caracteres tienen en la misma posición.
@@ -164,9 +164,21 @@ describe('23-Bucles.js', () => {
       let caracteres = 0;
       
         for (let i = 0 ; i< string1.lenght; i++){
-                caracteres+=i
+              for (let x = 0 ; x < string2.length ; x++){
+                if (string1[i] === string2[x]){
+                  caracteres ++
+                  
+                  
+                }
+              }
+                
         }
+        console.log(caracteres)
+        return caracteres
+        
     }
+
+    
 
    
   
